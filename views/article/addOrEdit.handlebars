@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h3>{{viewTitle}}</h3>
+</head>
+<form action="/article" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value={{article._id}}>
+    <div class="container c2">
+    <div >
+      <label class="label">Title</label>
+        <input type="text" name="Title" placeholder="Title" value="{{article.Title}}">
+        <div class="danger">
+          {{article.TitleError}}
+        </div>
+    </div>
+        <div >
+           <label class="label ">Created By</label>
+             <input type="text" name="CreatedBy" placeholder="Created By" value="{{article.CreatedBy}}" >
+             <div class="danger">
+          {{article.TitleError}}
+        </div>
+        </div>
+           <div >
+              <label class="label">Description</label>
+            <textarea name="Description" placeholder="Description" >{{article.Description}}</textarea>
+           </div>
+           <div >
+              <button type="submit" class="btn"> Save</button>
+        <a class="btn" href="/article/list" > View All</a>
+           </div>
+           </div>
+       
+</form>
+</body>
+</html>

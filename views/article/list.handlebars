@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ 
+</head>
+<body>
+  <div>
+    <a class="btn btn2" href="/article">click to create</a >
+  </div>
+<div >
+     {{#each list}}
+     <div class="column">
+     <div class="container c1"> 
+       
+         <h2 class="title t1">{{this.Title}}</h1>
+    <div>
+      <a href="/article/find/{{this._id}}" class="btn btn5">full article</a>
+    <a href="/article/{{this._id}}" class="btn btn4">Edit</a>
+     <a href="/article/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record ?');" class="btn btn3">Delete</a>
+
+     </div>
+     </div>
+     </div>
+     {{/each}}
+     </div>
+</body>
+</html>
